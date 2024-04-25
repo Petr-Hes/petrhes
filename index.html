@@ -1,97 +1,96 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset=utf-8">
-    <title> Petr Hes - úvod </title>
-    <style>
-      p, h1, h2, li, a {
+<head>
+    <meta charset="UTF-8" />
+    <title>Hlavní stránka</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        display: grid;
+        grid-template-columns: 3% 15% 2% 50% 2% 25% 3%;
+        grid-template-rows: 4% 2% repeat(9, 10%) 4%;
+        width: 100vw;
+        height: 100vh;
+        margin: 0px;
+    }
+    header {
+        grid-area: 2 / 2 / 4 / 7;
+        background-color: rgb(138, 5, 5);
+    }       
+    nav {
+        grid-area: ;
+    }
+    main {
+        grid-area: 5 / 4 / 13 / 5;
+        background-color: blue;
+    }
+    .sidebar {
+        grid-area: 4 / 6 / 13 / 7;
+        background-color: aliceblue;
+    }
+    h1 {
         color: white;
-      }
-      p {
-        font-family: georgia;
-        font-size: x-large;
-        position: absolute;
-        left: 350px;
-        right: 750px;
-        top: 200px;
-      }
-      h2 {
-        font-family: "Courier New", serfis;
-        font-size: 45px;
-        position: absolute;
-        top: 130px;
-        left: 870px;
-      }
-      h1 {
         font-family: "Courier New", serfis;
         font-size: 60px;
-        text-align: center
-      }
-      body {
-        background-color: black;
-      }
-      .logo {
-        position: absolute;
-        left: 700px;
-        top: 25px;
-      }
-      .úvod {
-        position: fixed;
-        top: 40px;
-        left: 38px;
-      }
-      .škola {
-        position: fixed;
-        top: 285px;
-        left: 31px;
-      }
-      .mimo {
-        position: fixed;
-        top: 545px;
-        left: 5px;
-      }
-      ul {
+        text-align: center;
+        margin: auto;
+    }
+    .ome {
+        grid-area: 3 / 3 / 10 / ;
+        background-color: aqua;
+    }
+    h2 {
+        color: white;
+        font-family: "Courier New", serfis;
+        font-size: 40px;
+        text-align: center;
+        margin: auto;
+    }
+    p {
+        color: white;
+        font-family: georgia;
+        font-size: x-large;
+    }
+    ul {
         list-style-type: none;
-      }
-      img {
-        float: left;
-      }
-      .fotka {
-        position: absolute;
-        float: right;
-        right: 60px;
-        top: 50px;
-      }
-    </style>
-  </head>
-  <body>
+    }
+    img {
+        width: 250px;
+    }
+</style>
+<body>
     <header>
-      <img src="logo.png" class="logo" width="130">
-      <h1>Petr Hes</h1>
+        <img src="logo.png" class="logo">
+        <h1>Petr Hes</h1>
     </header>
-      <nav>
+    <nav>
         <ul>
-          <li>
+        <li>
             <a href="https://petr-hes.github.io/petrhes/">
-              <img src="úvod.png" class="úvod" width="250"> 
+            <img src="uvod.png" class="úvod"> 
             </a><br>
-          </li>
-          <li>
+        </li>
+        <li>
             <a href="https://petr-hes.github.io/petrhes/škola">
-              <img src="škola.png" class="škola" width="260">
+            <img src="škola.png" class="škola">
             </a><br>
-          </li>
-          <li>
+        </li>
+        <li>
             <a href="https://petr-hes.github.io/petrhes/mimoškolní">
-              <img src="mimoškolní.png" class="mimo" width="310">
+            <img src="mimoškolní.png" class="mimo">
             </a>
-          </li>
+        </li>
         </ul>
-      </nav>
+    </nav>
+    <div class="sidebar">
+        <img src="fotkaa.jpg" class="fotka">
+    </div>
     <main>
-      <h2> Něco o mně </h2>
-      <p> Mé jméno je Petr Hes, momentálně je mi 16 let a měřím 190 centimetrů. Chodím na Střední školu informatiky a finančních služeb do Plzně. Bydlím v docela malé vesnici jménem Doubrava, která se nachází 5 kilometrů od města Nýřany. Nejraději mám hraní počítačových her a jízdu na čtyřkolce (o tom více informací na dalších stranách). </p>
-      <img src="fotkaa.jpg" class="fotka" width="600">
+    <div class="ome">
+        <h2> Něco o mně </h2>
+    </div>
+    <p> Mé jméno je Petr Hes, momentálně je mi 16 let a měřím 190 centimetrů. Chodím na Střední školu informatiky a finančních služeb do Plzně. Bydlím v docela malé vesnici jménem Doubrava, která se nachází 5 kilometrů od města Nýřany. Ve svém volném čase nejraději hraju počítačové hry a jízdím na čtyřkolce (Více informací na dalších stranách). </p>
     </main>
-  </body>
+</body>
 </html>
