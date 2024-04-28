@@ -1,96 +1,159 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset=utf-8">
-    <title> Petr Hes - škola </title>
-    <style>
-      p, h1, h2, li, a {
+<head>
+    <meta charset="UTF-8" />
+    <title>Hlavní stránka</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        display: grid;
+        grid-template-columns: 3% 14% 3% 50% 2% 25% 3%;
+        grid-template-rows: 4% 10% 2% repeat(8, 10%) 4%;
+        width: 100vw;
+        height: 100vh;
+        margin: 0px;
+        overflow: hidden;
+    }
+    header {
+        grid-area: 2 / 2 / 3 / 7;
+        border-bottom:solid white 4px;
+        display: flex;
+        justify-content: center;
+    }       
+    menu {
+        grid-area: 4 / 2 / 13 / 3;
+        margin: 0px;
+        list-style-type: none;
+        padding: 0px;
+    }
+    main {
+        grid-area: 4 / 4 / 13 / 5;
+        margin: 0px;
+    }
+    .sidebar {
+        grid-area: 4 / 6 / 13 / 7;
+        margin: 0;
+    }
+    h1 {
         color: white;
-      }
-      p {
-        font-family: georgia;
-        font-size: x-large;
-        position: absolute;
-        left: 350px;
-        right: 880px;
-        top: 200px;
-      }
-      h2 {
-        font-family: "Courier New", serfis;
-        font-size: 45px;
-        position: absolute;
-        top: 130px;
-        left: 920px;
-      }
-      h1 {
         font-family: "Courier New", serfis;
         font-size: 60px;
-        position: absolute;
-        left: 850px;
-      }
-      body {
-        background-color: black;
-      }
-      .logo {
-        position: absolute;
-        left: 700px;
-        top: 25px;
-      }
-      .úvod {
-        position: fixed;
-        top: 40px;
-        left: 38px;
-      }
-      .škola {
-        position: fixed;
-        top: 285px;
-        left: 31px;
-      }
-      .mimo {
-        position: fixed;
-        top: 545px;
-        left: 5px;
-      }
-      ul {
-        list-style-type: none;
-      }
-      img {
-        float: left;
-      }
-      .fotka {
-        position: relative;
-        float: right;
-        right: 60px;
-        top: 50px;
-      }
-    </style>
-  </head>
-  <body>
+        text-align: center;
+        margin-bottom: 7%;
+    }
+    h2 {
+        color: white;
+        font-family: "Courier New", serfis;
+        font-size: 40px;
+        text-align: center;
+        margin: auto;
+    }
+    p {
+        color: white;
+        font-family: georgia;
+        font-size: x-large;
+    }
+    img {
+        width: 100%;
+    }
+    a:hover {
+        opacity: 0.65;
+        transition: 0.3s;
+    }
+    .škola {
+        margin-top: 3%;
+    }
+    .mimo {
+        margin-top: 3%;
+    }
+    .logo {
+        width: 120px;
+    }
+    @media screen and (700px < width < 960px) {
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 37px;
+        }
+    }
+    @media screen and (480px < width < 700px) {
+        p {
+            font-size: 17px;
+        }
+        h1 {
+            font-size: 45px;
+        }
+        h2 {
+            font-size: 35px;
+        }
+    }
+    @media screen and (0px < width < 480px) {
+        main {
+            grid-area: 4 / 2 / 7 / 7;
+            margin: 15px;
+        }
+        .sidebar {
+            grid-area: 7 / 3 / 11 / 6;
+        }
+        menu {
+            grid-area: 2 / 2 / 3 / 7;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+        }
+        .mimo, .škola, .úvod {
+            max-width: 60%;
+            margin-top: 0%;
+        }
+        header {
+            display: none;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+</style>
+<body>
     <header>
-      <img src="logo.png" class="logo" width="130">
-      <h1>Petr Hes</h1>
+        <img src="logo.png" class="logo">
+        <h1>Petr Hes</h1>
     </header>
-      <nav>
-        <ul>
-          <li>
+    <menu>
+        <li>
             <a href="https://petr-hes.github.io/petrhes/">
-              <img src="úvod.png" class="úvod" width="250"> 
-            </a><br>
-          </li>
-          <li>
-            <a href="https://petr-hes.github.io/petrhes/škola">
-              <img src="škola.png" class="škola" width="260">
-            </a><br>
-          </li>
-          <li>
-            <a href="https://petr-hes.github.io/petrhes/mimoškolní">
-              <img src="mimoškolní.png" class="mimo" width="310">
+            <img src="uvod.png" class="úvod"> 
             </a>
-          </li>
-        </ul>
-      </nav>
+        </li>
+        <li>
+            <a href="https://petr-hes.github.io/petrhes/škola">
+            <img src="škola.png" class="škola">
+            </a>
+        </li>
+        <li>
+            <a href="https://petr-hes.github.io/petrhes/mimoškolní">
+            <img src="mimoškolní.png" class="mimo">
+            </a>
+        </li>
+    </menu>
+    <div class="sidebar">
+        <img src="fotka.jpg" class="fotka">
+    </div>
     <main>
-      <h2> Škola </h2>
+    <div class="škola">
+        <h2> Škola </h2>
+    </div>
       <p> Jak už jsem psal, tak chodím na Střední školu informatiky a finančních služeb. Tato škola se nachází v Plzni na Klatovské třídě 200G.
       Tuto školu jsem si vybral z důvodu příjemného prostředí, vyučování programování a vlastně všeho spojeného s informatikou.
       Zatím jsem s výběrem této školy velmi spokojen. Výsledkem studia programování na této škole je zatím webová stránka, na kterou teď koukáte. </p>
