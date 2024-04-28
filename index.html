@@ -8,37 +8,39 @@
     body {
         background-color: black;
         display: grid;
-        grid-template-columns: 3% 15% 2% 50% 2% 25% 3%;
-        grid-template-rows: 4% 2% repeat(9, 10%) 4%;
+        grid-template-columns: 3% 14% 3% 50% 2% 25% 3%;
+        grid-template-rows: 4% 10% 2% repeat(8, 10%) 4%;
         width: 100vw;
         height: 100vh;
         margin: 0px;
+        overflow: hidden;
     }
     header {
-        grid-area: 2 / 2 / 4 / 7;
-        background-color: rgb(138, 5, 5);
+        grid-area: 2 / 2 / 3 / 7;
+        border-bottom:solid white 4px;
+        display: flex;
+        justify-content: center;
     }       
-    nav {
-        grid-area: ;
+    menu {
+        grid-area: 4 / 2 / 13 / 3;
+        margin: 0px;
+        list-style-type: none;
+        padding: 0px;
     }
     main {
-        grid-area: 5 / 4 / 13 / 5;
-        background-color: blue;
+        grid-area: 4 / 4 / 13 / 5;
+        margin: 0px;
     }
     .sidebar {
         grid-area: 4 / 6 / 13 / 7;
-        background-color: aliceblue;
+        margin: 0;
     }
     h1 {
         color: white;
         font-family: "Courier New", serfis;
         font-size: 60px;
         text-align: center;
-        margin: auto;
-    }
-    .ome {
-        grid-area: 3 / 3 / 10 / ;
-        background-color: aqua;
+        margin-bottom: 7%;
     }
     h2 {
         color: white;
@@ -52,11 +54,69 @@
         font-family: georgia;
         font-size: x-large;
     }
-    ul {
-        list-style-type: none;
-    }
     img {
-        width: 10%;
+        width: 100%;
+    }
+    a:hover {
+        opacity: 0.65;
+        transition: 0.3s;
+    }
+    .škola {
+        margin-top: 3%;
+    }
+    .mimo {
+        margin-top: 3%;
+    }
+    .logo {
+        width: 120px;
+    }
+    @media screen and (700px < width < 960px) {
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 37px;
+        }
+    }
+    @media screen and (480px < width < 700px) {
+        p {
+            font-size: 17px;
+        }
+    }
+    @media screen and (0px < width < 480px) {
+        main {
+            grid-area: 4 / 2 / 7 / 7;
+            margin: 15px;
+        }
+        .sidebar {
+            grid-area: 7 / 3 / 11 / 6;
+        }
+        menu {
+            grid-area: 2 / 2 / 3 / 7;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+        }
+        .mimo, .škola, .úvod {
+            max-width: 60%;
+            margin-top: 0%;
+        }
+        header {
+            display: none;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 18px;
+        }
     }
 </style>
 <body>
@@ -64,25 +124,23 @@
         <img src="logo.png" class="logo">
         <h1>Petr Hes</h1>
     </header>
-    <nav>
-        <ul>
+    <menu>
         <li>
             <a href="https://petr-hes.github.io/petrhes/">
-            <img src="úvod.png" class="úvod"> 
-            </a><br>
+            <img src="uvod.png" class="úvod"> 
+            </a>
         </li>
         <li>
             <a href="https://petr-hes.github.io/petrhes/škola">
-            <img src="škola1.png" class="škola">
-            </a><br>
+            <img src="škola.png" class="škola">
+            </a>
         </li>
         <li>
             <a href="https://petr-hes.github.io/petrhes/mimoškolní">
-            <img src="mimoškolní1.png" class="mimo">
+            <img src="mimoškolní.png" class="mimo">
             </a>
         </li>
-        </ul>
-    </nav>
+    </menu>
     <div class="sidebar">
         <img src="fotkaa.jpg" class="fotka">
     </div>
