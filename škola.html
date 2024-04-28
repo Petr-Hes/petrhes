@@ -70,6 +70,14 @@
     .logo {
         width: 120px;
     }
+        @media screen and (960px < width < 1500px) {
+        main {
+            grid-area: 4 / 4 / 7 / 7;
+        }
+        .sidebar {
+            grid-area: 7 / 4 / 12 / 7;
+        }
+    }
     @media screen and (700px < width < 960px) {
         h1 {
             font-size: 50px;
@@ -79,6 +87,12 @@
         }
         h2 {
             font-size: 37px;
+        }
+        main {
+            grid-area: 4 / 4 / 7 / 7;
+        }
+        .sidebar {
+            grid-area: 7 / 4 / 12 / 7;
         }
     }
     @media screen and (480px < width < 700px) {
@@ -90,6 +104,12 @@
         }
         h2 {
             font-size: 35px;
+        }
+        main {
+            grid-area: 4 / 4 / 7 / 7;
+        }
+        .sidebar {
+            grid-area: 7 / 4 / 12 / 7;
         }
     }
     @media screen and (0px < width < 480px) {
