@@ -1,160 +1,128 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <title>Hlavní stránka</title>
-</head>
-<style>
-    body {
-        background-color: black;
-        display: grid;
-        grid-template-columns: 3% 14% 3% 50% 2% 25% 3%;
-        grid-template-rows: 4% 10% 2% repeat(8, 10%) 4%;
-        width: 100vw;
-        height: 100vh;
-        margin: 0px;
-        overflow: hidden;
-    }
-    header {
-        grid-area: 2 / 2 / 3 / 7;
-        border-bottom:solid white 4px;
-        display: flex;
-        justify-content: center;
-    }       
-    menu {
-        grid-area: 4 / 2 / 13 / 3;
-        margin: 0px;
-        list-style-type: none;
-        padding: 0px;
-    }
-    main {
-        grid-area: 4 / 4 / 13 / 5;
-        margin: 0px;
-    }
-    .sidebar {
-        grid-area: 4 / 6 / 13 / 7;
-        margin: 0;
-    }
-    h1 {
-        color: white;
-        font-family: "Courier New", serfis;
-        font-size: 60px;
-        text-align: center;
-    }
-    h2 {
-        color: white;
-        font-family: "Courier New", serfis;
-        font-size: 40px;
-        text-align: center;
-        margin: auto;
-    }
-    p {
-        color: white;
-        font-family: georgia;
-        font-size: x-large;
-    }
-    img {
-        width: 100%;
-        border-radius: 10px;
-    }
-    a:hover {
-        opacity: 0.65;
-        transition: 0.3s;
-    }
-    .škola {
-        margin-top: 3%;
-    }
-    .mimo {
-        margin-top: 3%;
-    }
-    .logo {
-        width: 120px;
-    }
-    @media screen and (700px < width < 960px) {
-        h1 {
-            font-size: 50px;
-        }
-        p {
-            font-size: 20px;
-        }
-        h2 {
-            font-size: 37px;
-        }
-    }
-    @media screen and (550px < width < 700px) {
-        p {
-            font-size: 17px;
-        }
-        h1 {
-            font-size: 45px;
-        }
-        h2 {
-            font-size: 35px;
-        }
-    }
-    @media screen and (0px < width <= 550px) {
-        main {
-            grid-area: 4 / 2 / 7 / 7;
-            margin: 15px;
-        }
-        .sidebar {
-            grid-area: 7 / 3 / 11 / 6;
-        }
-        menu {
-            grid-area: 2 / 2 / 3 / 7;
-            display: flex;
-            justify-content: space-between;
-            list-style-type: none;
-        }
-        a {
-            display: flex;
-            justify-content: center;
-        }
-        .mimo, .škola, .úvod {
-            max-width: 60%;
-            margin-top: 0%;
-        }
-        header {
-            display: none;
-        }
-        h2 {
-            font-size: 30px;
-        }
-        p {
-            font-size: 18px;
-        }
-    }
-</style>
-<body>
-    <header>
-        <img src="logo.png" class="logo">
-        <h1>Petr Hes</h1>
-    </header>
-    <menu>
-        <li>
-            <a href="https://petr-hes.github.io/petrhes/">
-            <img src="úvod.png" class="úvod"> 
-            </a>
-        </li>
-        <li>
-            <a href="https://petr-hes.github.io/petrhes/škola">
-            <img src="škola1.png" class="škola">
-            </a>
-        </li>
-        <li>
-            <a href="https://petr-hes.github.io/petrhes/mimoškolní">
-            <img src="mimoškolní1.png" class="mimo">
-            </a>
-        </li>
-    </menu>
-    <div class="sidebar">
-        <img src="fotkaa.jpg" class="fotka">
-    </div>
-    <main>
-    <div class="ome">
-        <h2> Něco o mně </h2>
-    </div>
-    <p> Mé jméno je Petr Hes, momentálně je mi 16 let a měřím 190 centimetrů. Chodím na Střední školu informatiky a finančních služeb do Plzně. Bydlím v docela malé vesnici jménem Doubrava, která se nachází 5 kilometrů od města Nýřany. Ve svém volném čase nejraději hraju počítačové hry a jízdím na čtyřkolce (Více informací na dalších stranách). </p>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hlavní stránka</title>
+        <style>
+            html {
+                overflow: hidden;
+            }
+            * {
+                color: white;
+            }
+            body {
+                background-color: black;
+            }
+            header {
+                height: 120px;
+                width: 99vw;
+                display: flex;
+                justify-content: center;
+                border-bottom: 2px solid rgb(255, 255, 255);
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            img {
+                border-radius: 10px;
+            }
+            .hlavni {
+                display: flex;
+                text-align: center;
+                justify-content: space-between;
+                height: 100%;
+            }
+            menu {
+                width: 14vw;
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                padding: 0%;
+                list-style-type: none;
+                img {
+                    width: 13vw;
+                }
+            }
+            main {
+                margin: 10px 30px;
+                width: 62vw;
+            }
+            .fotka {
+                width: 25vw;
+                height: 100vh;
+                img {
+                    width: 100%;
+                }
+                margin-top: 10px;
+            }
+            h1 {
+            font-family: "Courier New", serfis;
+            font-size: 60px;
+            }
+            h2 {
+                font-family: "Courier New", serfis;
+                font-size: 40px;
+            }
+            p {
+            font-family: georgia;
+            font-size: x-large;
+            }
+            @media screen and (max-width: 1220px){
+                header {
+                    display: none;
+                }
+                .hlavni {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                menu {
+                    justify-content: center;
+                    width: 100%;
+                    flex-direction: row;
+                    img {
+                        width: 15vw;
+                        margin: 10px;
+                    }
+                    li {
+                        margin-left: 2vw;
+                        margin-right: 2vw;
+                    }
+                }
+                p {
+                    font-size: 20px;
+                }
+                .fotka {
+                    width: 320px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="logo.png">
+            <h1>Petr Hes</h1>
+        </header>
+        <div class="hlavni">
+            <menu>
+                <li>
+                    <a href="https://petr-hes.github.io/petrhes/"><img src="uvod.png"></a>
+                </li>
+                <li>
+                    <a href="https://petr-hes.github.io/petrhes/škola"><img src="škola.png"></a>
+                </li>
+                <li>
+                    <a href="https://petr-hes.github.io/petrhes/mimoškolní"><img src="mimoškolní.png"></a>
+                </li>
+            </menu>
+                <main>
+                    <h2>Něco o mně</h2>
+                    <p> Mé jméno je Petr Hes, momentálně je mi 16 let a měřím 190 centimetrů. Chodím na Střední školu informatiky a finančních služeb do Plzně. Bydlím v docela malé vesnici jménem Doubrava, která se nachází 5 kilometrů od města Nýřany. Ve svém volném čase nejraději hraju počítačové hry a jízdím na čtyřkolce (Více informací na dalších stranách). </p>
+                </main>
+                <div class="fotka">
+                    <img src="fotkaa.jpg">
+                </div>
+            </div>
+            </div>
+    </body>
 </html>
